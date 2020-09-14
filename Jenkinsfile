@@ -16,9 +16,9 @@ pipeline {
             }
         }
         
-          stage('INFO') {
+          stage('SAVE BUILD ID') {
             steps {
-                sh "whoami"
+                sh "echo "v${env.BUILD_ID}" >> build_id"
                 sh "pwd"                
             }
         }
