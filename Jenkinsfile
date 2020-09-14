@@ -18,6 +18,8 @@ pipeline {
             steps {
                 sh "docker build -t localhost:5000/mojobraz:v1 ."
                 sh "docker push localhost:5000/mojobraz:v1"
+                echo "ID builda: ${env.BUILD_ID}"
+                echo "ID builda: ${env.BUILD_NUMBER}"
             }
         }
         
