@@ -16,7 +16,8 @@ pipeline {
         
          stage('DOCKER IMAGE') {
             steps {
-                sh "docker build -t obraz:v1 ."
+                sh "docker build -t localhost:5000/mojobraz:v1 ."
+                sh "docker push localhost:5000/mojobraz:v1"
             }
         }
         
