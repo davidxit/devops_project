@@ -19,7 +19,7 @@ pipeline {
           stage('SAVE BUILD ID') {
             steps {
                 sh "echo 'v${env.BUILD_ID}' > build_id"
-                sh "pwd"                
+                sh "scp build_id vagrant@172.42.42.100:/home/vagrant"                
             }
         }
         
