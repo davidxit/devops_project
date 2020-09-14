@@ -16,10 +16,8 @@ pipeline {
         
          stage('DOCKER IMAGE') {
             steps {
-                sh "docker build -t localhost:5000/mojobraz:v1 ."
-                sh "docker push localhost:5000/mojobraz:v1"
-                echo "ID builda: ${env.BUILD_ID}"
-                echo "ID builda: ${env.BUILD_NUMBER}"
+                sh "docker build -t localhost:5000/mojobraz:${env.BUILD_ID} ."
+                sh "docker push localhost:5000/mojobraz:${env.BUILD_ID}"                
             }
         }
         
