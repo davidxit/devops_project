@@ -23,5 +23,12 @@ pipeline {
             }
         }
         
+          stage('DEPLOY') {
+            steps {
+                sh "ssh vagrant@172.42.42.100 /home/vagrant/deploy.sh"               
+            }
+        }
+            
+        
     }
 }
