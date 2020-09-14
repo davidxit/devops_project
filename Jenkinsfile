@@ -18,7 +18,7 @@ pipeline {
         
           stage('SAVE BUILD ID') {
             steps {
-                sh "echo 'v${env.BUILD_ID}' >> build_id.txt"
+                sh "echo 'v${env.BUILD_ID}' >> build_id"
                 sh "pwd"                
             }
         }
