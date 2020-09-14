@@ -16,7 +16,7 @@ pipeline {
         
          stage('DOCKER IMAGE') {
             steps {
-                sh "docker build -t obraz:v1"
+                sh "docker build -t obraz:v1 ."
             }
         }
         
