@@ -15,7 +15,7 @@ public class FancyAppApplication {
 
 	@GetMapping("/hello")
 	public String Hello(){
-		return "HelloWorld";
+		return "Hello DevOps!";
 	}
 
 
